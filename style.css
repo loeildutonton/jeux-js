@@ -1,4 +1,127 @@
-.test {
+.reset-button, .js-plateau__game__actions__roll-dice, .js-plateau__game__actions__hold, .js-plateau__btn-new-game {
+  background: transparent;
+  border: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  background-color: white;
+  color: black;
+}
+
+.js-game {
+  padding: 15px 20px;
+  background: rgb(233, 168, 24);
+  background: linear-gradient(90deg, rgb(233, 168, 24) 0%, rgba(162, 143, 8, 0.45980399) 100%);
+}
+
+.js-plateau {
+  padding: 30px;
+  background: rgb(242, 242, 240);
+  background: linear-gradient(90deg, rgb(242, 242, 240) 50%, rgb(255, 255, 255) 50%);
+}
+
+.js-plateau__btn-new-game {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  padding-left: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.js-plateau__btn-new-game:before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "+";
+  inset-inline-start: 2px;
+  inset-block-start: -13px;
+  color: red;
+  font-size: 40px;
+  font-weight: lighter;
+}
+.js-plateau__btn-new-game:after {
+  position: absolute;
+  content: "";
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: red;
+  width: 25px;
+  height: 25px;
+}
+
+.js-plateau__game {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-evenly;
+}
+.js-plateau__game .js-plateau__game__js-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.js-plateau__game .js-plateau__game__js-player h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.js-plateau__game .js-plateau__game__js-player__js-score {
+  font-size: 56px;
+  font-weight: lighter;
+  color: red;
+}
+.js-plateau__game .js-plateau__game__js-player__js-current {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  background: red;
+  padding: 10px;
+  width: 70px;
+  margin-top: 120px;
+}
+.js-plateau__game .js-plateau__game__js-player__js-current__js-round {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.js-plateau__game .js-plateau__game__js-player__js-current__js-round-number {
+  color: white;
+  font-size: 22px;
+}
+
+.js-plateau__game__actions__dice-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.js-plateau__game__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.js-plateau__game__actions__dice {
+  width: 80px;
+  height: 80px;
+  margin: 50px auto;
+  background-color: white;
+  box-shadow: 1px 1px 2px grey;
+}
+.js-plateau__game__actions__roll-dice, .js-plateau__game__actions__hold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.js-plateau__game__actions__roll-dice span, .js-plateau__game__actions__hold span {
   color: red;
 }
 
